@@ -30,7 +30,7 @@ public class task3 {
         else if (i >= 18 & i < 23) {
             System.out.printf( "Добрый вечер, "+name+"!");
         }
-        else if (i >= 23 & i < 5) {
+        else if (i >= 23 | i < 5) {
             System.out.printf( "Доброй ночи, "+name+"!");
         }
         in.close();
