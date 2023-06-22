@@ -27,26 +27,24 @@ public class task4_1 {
     public static void main(String[] args) {
         Deque<String> storage = new LinkedList<>();
         Scanner scanner = new Scanner(System.in);
-
+        while (true) {
             try {
-                while (true){
                 String command = scanner.nextLine();
                 if ("exit".equals(command)) {
                     break;
                 }
                 if ("print".equals(command)) {
                     System.out.println(storage);
-                }
-                else if ("revert".equals(command)) {
+                } else if ("revert".equals(command)) {
                     storage.removeFirst();
                 } else storage.addFirst(command);
-                }
-                System.out.println("Программа завершена");
-            }
-            catch (NoSuchElementException e) {
+                } catch (NoSuchElementException e) {
                 System.err.println("revert -> throw new NoSuchElementException");
+                }
             }
+        System.out.println("Программа завершена");
         }
     }
+
 
 
